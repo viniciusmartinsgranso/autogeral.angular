@@ -1,0 +1,7 @@
+{
+  "name": "autogeral.angular",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
