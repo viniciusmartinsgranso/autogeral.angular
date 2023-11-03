@@ -1,0 +1,77 @@
+.footer {
+  background-color: var(--blue-principal-color);
+  display: flex;
+  color: white;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: .85rem;
+
+  &--content {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
+    padding: 0 14rem;
+
+    &--about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 33%;
+      gap: 2rem;
+
+      &--info {
+        font-style: italic;
+        line-height: 2rem;
+      }
+    }
+
+    &--list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 33%;
+
+      &--items {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        a {
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+          font-style: italic;
+
+          &:hover {
+            color: var(--yellow-ag);
+          }
+        }
+      }
+    }
+
+    &--download {
+      width: 33%;
+
+      &--items {
+        display: flex;
+        gap: 1rem;
+
+        &--stores {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+
+  &--rights {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+  }
+}
