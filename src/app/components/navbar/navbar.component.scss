@@ -1,0 +1,77 @@
+.navbar {
+  width: 100vw;
+  padding: 1rem;
+  background-color: var(--blue-principal-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &--logo {
+    flex: 1;
+
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &--search {
+    flex: 2;
+
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid var(--blue-light-color);
+    border-radius: 2rem;
+    padding: 0 1.5rem;
+    color: white;
+    font-size: 1rem;
+    cursor: text;
+    background: rgb(24, 26, 27);
+
+    input {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      outline: none;
+      border: none;
+
+      &::placeholder {
+        color: var(--blue-second-light-color);
+      }
+    }
+
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &--options {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    &--item {
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: center;
+      cursor: pointer;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+
+.click-images {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
