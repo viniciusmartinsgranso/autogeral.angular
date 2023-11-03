@@ -5,33 +5,39 @@
       <label class="footer--content--about--info">Mais de 50 anos de tradição, com um atendimento de qualidade, excelência no serviço e sempre procurando o
         preço mais justo para o cliente.</label>
     </div>
+
     <div class="footer--content--list">
       <h3>Sobre</h3>
       <div class="footer--content--list--items">
-        <a>Quem somos</a>
-        <a>Políticas da loja</a>
-        <a>Políticas de privacidade</a>
-        <a>Lojas</a>
-        <a>Blog</a>
+        <ng-container *ngFor="let item of aboutItems">
+          <a (click)="openModal(item.link)">{{ item.name }}</a>
+        </ng-container>
       </div>
     </div>
+
     <div class="footer--content--list">
       <h3>Serviços</h3>
 
       <div class="footer--content--list--items">
-        <a>Quem somos</a>
-        <a>Políticas da loja</a>
-        <a>Políticas de privacidade</a>
+        <ng-container *ngFor="let item of serviceList">
+          <a (click)="openModal(item.link)">{{ item.name }}</a>
+        </ng-container>
       </div>
     </div>
+
     <div class="footer--content--download">
       <h3>
         Baixe nosso App
       </h3>
+
       <div class="footer--content--download--items">
         <div class="footer--content--download--items--stores">
-          <img src="https://autogeral.com.br/images/fragments/footer/google-play.webp">
-          <img src="https://autogeral.com.br/images/fragments/footer/app-store.webp">
+          <a href="https://play.google.com/store/apps/details?id=br.com.autogeral.ecommerce_app&pli=1" target="_blank">
+            <img src="https://autogeral.com.br/images/fragments/footer/google-play.webp">
+          </a>
+          <a href="https://apps.apple.com/br/app/auto-geral-autope%C3%A7as/id1583077391" target="_blank">
+            <img src="https://autogeral.com.br/images/fragments/footer/app-store.webp">
+          </a>
         </div>
         <img src="assets/images/qr-code.svg">
       </div>

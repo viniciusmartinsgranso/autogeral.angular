@@ -1,22 +1,27 @@
-<div class="navbar">
-  <div class="navbar--logo" (click)="goToHome()">
-    <img src="assets/images/logo.svg">
+<nav>
+  <div class="navbar">
+    <div class="navbar--logo" (click)="goToRoute('/home')">
+      <img src="assets/images/logo.svg">
+    </div>
+
+    <div class="navbar--search">
+      <input type="text" placeholder="O que você precisa?">
+      <img class="click-images" src="assets/images/search.svg">
+    </div>
+
+    <div class="navbar--options">
+      <ng-container *ngFor="let item of navbarList">
+        <a class="navbar--options--item">
+          <img [src]="item.img" alt="">
+          {{ item.name }}
+        </a>
+      </ng-container>
+    </div>
   </div>
 
-  <div class="navbar--search">
-    <input type="text" placeholder="O que você precisa?">
-    <img class="click-images" src="assets/images/search.svg">
+  <div class="options">
+    <ng-container *ngFor="let item of optionsList">
+      <a (click)="goToRoute(item.link)">{{ item.name }}</a>
+    </ng-container>
   </div>
-
-  <div class="navbar--options">
-    <a class="navbar--options--item">
-      <img src="assets/images/user.svg">
-      Entrar
-    </a>
-
-    <a class="navbar--options--item">
-      <img src="assets/images/shopping.svg">
-      Carrinho
-    </a>
-  </div>
-</div>
+</nav>
